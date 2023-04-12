@@ -1,2 +1,2 @@
-# rabbitmq-client
-Application how we can monitor RabbitMQ
+# rabbit-client
+Vansa Martin private

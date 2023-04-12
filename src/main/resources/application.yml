@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+    addresses: 2c4f2828-43a9-464d-8d11-d14d80dfb2c2.c9v3nahd0oekcvsra2t0.databases.appdomain.cloud:30830
+    adminAddresses: 2c4f2828-43a9-464d-8d11-d14d80dfb2c2.c9v3nahd0oekcvsra2t0.databases.appdomain.cloud:30830
+    username: issp
+    password: amqps@uat4issp
+    useSSL: true
+    ssl:
+        enabled: true
+        algorithm: TLSv1.2
+
+
+
+issp:
+  env: UAT
+
+teams:
+  webhook: Tralala
+
