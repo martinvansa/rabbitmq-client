@@ -1,0 +1,54 @@
+ext.artifactoryUrlTaas = 'https://na.artifactory.taas.kyndryl.net'
+
+if (rootProject.hasProperty('taasUrl')){
+    ext.artifactoryUrlTaas = rootProject.getProperty('taasUrl')
+}
+if (!rootProject.hasProperty('taasUsername') && !hasProperty('taasUsername')) {
+    ext.taasUsername = ''
+}
+if (!rootProject.hasProperty('taasPassword') && !hasProperty('taasPassword')) {
+    ext.taasPassword = ''
+}
+
+ext.thirdpartyRepoUrlTaas = artifactoryUrlTaas + '/artifactory/kyn-issp-team-thirdparty-maven-local/'
+ext.isspReleasesRepoUrlTaas = artifactoryUrlTaas + '/artifactory/kyn-issp-team-common-maven-local/'
+ext.isspSnapshotsRepoUrlTaas = artifactoryUrlTaas + '/artifactory/kyn-issp-team-snapshot-maven-local/'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {
+                name 'issp-thirdparty-taas'
+                url thirdpartyRepoUrlTaas
+                credentials {
+                    username "${taasUsername}"
+                    password "${taasPassword}"
+                }
+        }
+        maven {
+                name 'issp-snapshots-taas'
+                url isspSnapshotsRepoUrlTaas
+                credentials {
+                    username "${taasUsername}"
+                    password "${taasPassword}"
+                }
+        }
+        maven {
+                name 'issp-releases-taas'
+                url isspReleasesRepoUrlTaas
+                credentials {
+                    username "${taasUsername}"
+                    password "${taasPassword}"
+                }
+        }
+    }
+
+        apply plugin: 'eclipse'
+
+        eclipse {
+                project {
+                        natures 'org.eclipse.wst.common.modulecore.ModuleCoreNature'
+                }
+    }
+}
+

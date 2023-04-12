@@ -1,0 +1,148 @@
+ext.versions = [
+
+    bytebuddy: '1.12.9',
+    junit: '5.8.2',
+    junitplatform: '1.8.2',
+    mockito: '4.6.1',
+    powermock: '2.0.9',
+    projectlombok: '1.18.24',
+    immutables: '2.9.0',
+    apiguardian: '1.1.2',
+    reflections: '0.10.2',
+
+    hamcrest: '1.3',
+    assertj: '3.23.1',
+    logback: '1.2.11',
+
+    httpcomponents: '4.5.13',
+
+    javaxjaxb: '2.3.1',
+    sunjaxb: '3.0.2',
+    xstream: '1.4.19',
+
+    commons: [
+        lang3: '3.12.0',
+        math3: '3.6.1',
+        io: '2.11.0',
+        validator: '1.7',
+        collections: '4.4',
+        codec: '1.15',
+        compress: '1.21',
+        text: '1.9',
+    ],
+
+    jakarta: [
+        mail: '2.0.1',
+        validationapi: '2.0.1',
+        activationapi: '2.0.1',
+        bindapi: '4.0.0',
+    ],
+    javax: [
+        validationapi: '2.0.1.Final',
+        servlet: '4.0.1',
+    ],
+
+    poi: [
+        base: '4.1.1',
+    ],
+
+    xmlbeans: '3.1.0',
+
+]
+
+ext.libs = [
+    xmlbeans: [
+        "org.apache.xmlbeans:xmlbeans:$versions.xmlbeans"
+    ],
+
+    reflections: [
+        "org.reflections:reflections:$versions.reflections"
+    ],
+
+    apiguardian: [
+        "org.apiguardian:apiguardian-api:$versions.apiguardian"
+    ],
+
+    poi: [
+        core: "org.apache.poi:poi:$versions.poi.base",
+        ooxml: "org.apache.poi:poi-ooxml:$versions.poi.base",
+    ],
+
+    projectlombok: [
+        "org.projectlombok:lombok:$versions.projectlombok",
+    ],
+
+    commons: [
+        lang3: "org.apache.commons:commons-lang3:$versions.commons.lang3",
+        math3: "org.apache.commons:commons-math3:$versions.commons.math3",
+        io: "commons-io:commons-io:$versions.commons.io",
+        validator: "commons-validator:commons-validator:$versions.commons.validator",
+        collections: "org.apache.commons:commons-collections4:$versions.commons.collections",
+        codec: "commons-codec:commons-codec:$versions.commons.codec",
+        compress: "org.apache.commons:commons-compress:$versions.commons.compress",
+        text: "org.apache.commons:commons-text:$versions.commons.text",
+    ],
+
+    httpcomponents: [
+        client: "org.apache.httpcomponents:httpclient:$versions.httpcomponents",
+    ],
+
+    jakarta: [
+        mail: "com.sun.mail:jakarta.mail:$versions.jakarta.mail",
+        validationapi: "jakarta.validation:jakarta.validation-api:$versions.jakarta.validationapi",
+        activationapi: "jakarta.activation:jakarta.activation-api:$versions.jakarta.activationapi",
+        bindapi: "jakarta.xml.bind:jakarta.xml.bind-api:$versions.jakarta.bindapi",
+    ],
+
+    javax: [
+        validationapi: "javax.validation:validation-api:$versions.javax.validationapi",
+        servlet: "javax.servlet:javax.servlet-api:$versions.javax.servlet",
+    ],
+
+    hamcrest: [
+        "org.hamcrest:hamcrest-library:$versions.hamcrest",
+    ],
+
+    assertj: [
+            "org.assertj:assertj-core:$versions.assertj",
+    ],
+
+    logback: [
+        "ch.qos.logback:logback-classic:$versions.logback",
+    ],
+
+    junit5: [
+        "org.junit.vintage:junit-vintage-engine:$versions.junit",
+        "org.junit.jupiter:junit-jupiter-engine:$versions.junit",
+        "org.junit.jupiter:junit-jupiter-api:$versions.junit",
+
+        "org.junit.platform:junit-platform-runner:$versions.junitplatform",
+        "org.junit.platform:junit-platform-launcher:$versions.junitplatform",
+        "org.junit.platform:junit-platform-console:$versions.junitplatform",
+    ],
+
+    mockito: [
+        "org.mockito:mockito-core:$versions.mockito",
+        "org.mockito:mockito-junit-jupiter:$versions.mockito",
+        "net.bytebuddy:byte-buddy:$versions.bytebuddy"
+    ],
+
+    powermock: [
+        "org.powermock:powermock-api-mockito2:$versions.powermock",
+        "org.powermock:powermock-module-junit4:$versions.powermock",
+    ],
+
+    xstream: [
+        "com.thoughtworks.xstream:xstream:$versions.xstream",
+    ],
+
+    immutables:  "org.immutables:value:$versions.immutables",
+
+    jaxb: [
+        jaxws: "javax.xml.ws:jaxws-api:$versions.javaxjaxb",
+        jaxbapi: "javax.xml.bind:jaxb-api:$versions.javaxjaxb",
+        jaxbcore: "com.sun.xml.bind:jaxb-core:$versions.sunjaxb",
+        jaxbimpl: "com.sun.xml.bind:jaxb-impl:$versions.sunjaxb",
+    ],
+
+]
